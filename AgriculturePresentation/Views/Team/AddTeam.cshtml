@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Team
+
+@{
+    ViewData["Title"] = "AddTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add New Team Member</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Name and Surname</label>
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter name and surname" asp-for="PersonName">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Title</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter Title" asp-for="Title">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Image</label>
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter image url" asp-for="ImageUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Facebook</label>
+                    <span asp-validation-for="FacebookUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter facebook url" asp-for="FacebookUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Instagram</label>
+                    <span asp-validation-for="InstagramUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter instagram url" asp-for="InstagramUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Website</label>
+                    <span asp-validation-for="WebsiteUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter website url" asp-for="WebsiteUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Twitter</label>
+                    <span asp-validation-for="TwitterkUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" placeholder="Enter twitter url" asp-for="TwitterkUrl">
+                </div>
+                <button type="submit" class="btn btn-outline-success me-2">Submit</button>
+                <a href="/Team/Index/" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

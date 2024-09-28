@@ -1,0 +1,40 @@
+﻿@using EntityLayer.Concrete
+@model List<Announcement>
+
+<div class="blog" id="blog">
+    <div class="container">
+        <h3 class="tittle">Latest News</h3>
+        <p class="heading-btm-w3ls"></p>
+        @foreach (var item in Model)
+        {
+            <div class="blog-grid-w3-agileits">
+                <div class=" col-md-7 blog-img1-agileits-w3layouts">
+                    <a href="@item.Image" data-toggle="modal" data-target="#myModal2"></a>
+                </div>
+                <div class=" col-md-5 blog-info-w3layouts">
+                    <h6> <a href="#" data-toggle="modal" data-target="#myModal2">@item.Title</a></h6>
+                    <div class="inner-info">
+                        <a href="#" class="blog-text-w3ls bar"></a><span>@item.Date</span>
+                        <p class="para-w3-agileits">@item.Description</p>
+                    </div>
+                    <a href="@item.Image" class="blog-more-agile" data-toggle="modal" data-target="#myModal2">Read More</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>In Harvest</h4>
+                            <img src="@item.Image" alt=" " class="img-responsive">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

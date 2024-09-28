@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "EditContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Edit Message</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    @Html.HiddenFor(x => x.ContactId)
+                    <label for="exampleInputName1">Name</label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Name" placeholder="Enter Name and Surname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">EMail-Address</label>
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                    <input type="email" class="form-control" asp-for="Mail" placeholder="Enter Email-Address">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">Message</label>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                    <textarea class="form-control" rows="4" asp-for="Message" placeholder="Enter Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-success me-2">Submit</button>
+                <a href="/Contact/Index/" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@model AgriculturePresentation.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Login Agriculture</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="~/snow-login-form-starter/css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+	<!-- login form -->
+	<section class="w3l-login">
+		<div class="overlay">
+			<div class="wrapper">
+				<div class="logo">
+					<a class="brand-logo" href="index.html">login form</a>
+				</div>
+				<div class="form-section">
+					<h3>Login</h3>
+					<h6>To continue with Us</h6>
+					<form action="#" method="post" class="signin-form">
+						<div class="form-input">
+							<label>Username</label>
+							<span asp-validation-for="userName" class="text-danger"></span>
+							<input type="text" placeholder="Username" required="" autofocus asp-for="userName">
+						</div>
+						<div class="form-input">
+							<label>Password</label>
+							<span asp-validation-for="password" class="text-danger"></span>
+							<input type="password" placeholder="Password" required="" asp-for="password">
+						</div>
+						<label class="check-remaind">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							<p class="remember">Remember me</p>
+						</label>
+						<button type="submit" class="btn btn-primary theme-button mt-4">Log in</button>
+					</form>
+					<div class="text-center mt-4 font-weight-light">
+						Don't have an account? <a href="/Login/SignUp/" class="text-primary">Sign Up</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+		<!-- copyright -->
+		<div class="copy-right">
+			<p>&copy; @DateTime.Now.Year Snow Login Form. All rights reserved | Design by <a href="https://github.com/ParanovaFactory" target="_blank">Sadık Berkay Karaduman</a></p>
+		</div>
+		<!-- //copyright -->
+	</section>
+
+	<!-- /login form -->
+</body>
+
+</html>

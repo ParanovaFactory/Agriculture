@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadPartial")
+<body>
+	<div class="header">
+		<div class="container">
+			@await Component.InvokeAsync("_TopAddressPartial")
+			@await Component.InvokeAsync("_SocialMediaPartial")
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	@await Component.InvokeAsync("_NavbarPartial")
+	@await Component.InvokeAsync("_AboutPartial")
+	@await Component.InvokeAsync("_ServicePartial")
+	@await Component.InvokeAsync("_TeamPartial")
+	@* @await Component.InvokeAsync("_AnnouncementPartial") *@
+	@await Component.InvokeAsync("_GalleryPartial")
+	<div class="contact-agile" id="contact">
+		<div class="container">
+			<h3 class="tittle">Contact Us</h3>
+			<p class="heading-btm-w3ls"></p>
+			@await Component.InvokeAsync("_AddressPartial")
+			@* @await Component.InvokeAsync("_ContactPartial") *@
+			@await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
+		</div>
+	</div>
+	@await Component.InvokeAsync("_MapPartial")
+	@await Component.InvokeAsync("_FooterPartial")
+	@await Component.InvokeAsync("_JsPartial")
+</body>
+</html>

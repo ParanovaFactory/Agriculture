@@ -1,0 +1,10 @@
+﻿@using EntityLayer.Concrete
+@model List<Address>
+
+<div class="map-w3ls">
+	@foreach (var item in Model)
+	{
+
+		<iframe src="@item.Mapinfo"></iframe>
+	}
+</div>

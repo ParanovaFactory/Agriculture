@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Admin
+
+@{
+    ViewData["Title"] = "UpdateAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Udpate Admin</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    @Html.HiddenFor(x => x.AdminId)
+                    <label for="exampleInputName1">Username</label>
+                    <span class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Password</label>
+                    <span class="text-danger"></span>
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="btn btn-outline-success me-2">Submit</button>
+                <a href="/Admin/Index/" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+

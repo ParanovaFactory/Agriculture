@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Image
+@{
+    ViewData["Title"] = "AddImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add New Image</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Title</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Title" placeholder="Enter Title">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">Description</label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <textarea class="form-control" rows="4" asp-for="Description" placeholder="Enter Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Image</label>
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="ImageUrl" placeholder="Enter Image Url">
+                </div>
+                <button type="submit" class="btn btn-outline-success me-2">Submit</button>
+                <a href="/Image/Index/" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
