@@ -2,25 +2,36 @@
 
 ## 📄 Description
 
-This is an **Agriculture Management System** developed using **ASP.NET Core 5.0** with an **N-Tier Architecture**. The system aims to streamline various agricultural processes and manage key data related to farming, crops, and farm activities. It is built to provide users with a scalable, maintainable, and structured application using modern development practices and technologies.
+This project is an **Agriculture Management System** built using **.NET Core 5.0** and follows the **N-Tier Architecture**. It is designed to manage agricultural activities, track farm data, and optimize the workflow between farmers and agricultural processes. This application enables efficient management of farm data, crop information, harvest tracking, and other related processes.
+
+The **frontend** uses a **ready-to-use template**, which provides a clean and modern user interface. This pre-designed template helps in quickly launching the application with a professional and responsive design, requiring minimal frontend customization. It makes the application user-friendly and responsive across different devices.
 
 ## 🛠️ Technologies Used
 
 - **Backend:** ASP.NET Core 5.0
-- **Architecture:** N-Tier Architecture (separation of concerns)
-- **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQL Server
-- **Entity Framework Core:** ORM for database interaction
-- **Authentication:** ASP.NET Core Identity for user management
-- **CRUD Operations:** Full create, read, update, and delete functionality across the application
+- **Frontend:** Ready-to-use template (HTML, CSS, JavaScript, Bootstrap)
+- **Architecture:** N-Tier Architecture (Presentation Layer, Business Layer, Data Layer)
+- **Database:** SQL Server (for storing farm data, crop information, etc.)
+- **API Integration:** RESTful APIs for handling data communication between frontend and backend
+- **Authentication:** (If implemented, you can add details about user authentication or admin control)
 
 ## 📚 Features
 
-- **Crop Management:** Add, update, and view crop information.
-- **Farm Data:** Maintain records of farms, including location, crops planted, and other related data.
-- **User Authentication:** Admin users can manage the application using ASP.NET Core Identity.
-- **N-Tier Architecture:** Clean separation between data, business logic, and UI, ensuring maintainability and scalability.
-- **Reporting:** Generate reports on crop activities and farm statuses.
+- **Farm Management:** Provides the ability to track and manage farm data, crops, and harvests.
+- **Crop Information:** Allows users to input and track crop-related data, including planting and harvesting dates.
+- **Harvest Tracking:** Monitor and track harvest progress, yield, and other key metrics.
+- **Ready-to-use Template:** The frontend leverages a responsive, ready-to-use template for a user-friendly experience.
+- **User Interface:** Clean, intuitive design with forms for adding, updating, and deleting farm-related data.
+- **CRUD Operations:** Full Create, Read, Update, and Delete functionality for crops, harvests, and farm data.
+- **N-Tier Architecture:** Well-structured code with separate layers for presentation, business logic, and data access for better maintainability and scalability.
+
+## 🗂️ Project Structure
+
+- **Presentation Layer:** Handles the user interface and interactions, such as displaying farm data and managing crops.
+- **Business Logic Layer:** Contains the logic for processing and managing farm and crop data.
+- **Data Access Layer:** Responsible for interacting with the database (SQL Server) to perform CRUD operations on farm data.
+- **Models:** Defines the data structures for farm management, crop data, and harvest tracking.
+- **Controllers:** Manages the flow of data between views and business logic.
 
 ---
 
